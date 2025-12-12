@@ -2,8 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Opcional: Adicionar uma fonte mais bonita */
+:root {
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Esquema de cores base para prevenir flash de cor branca */
+  color-scheme: dark;
+}
+
 body {
-  font-family: "Inter", sans-serif;
-  background-color: #0a0a0a; /* Fundo escuro para garantir */
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+
+  /* Cor de fundo base (Quase preto, mas não #000000) */
+  background-color: #050505;
+  color: rgba(255, 255, 255, 0.87);
+
+  /* PADRÃO DE PONTOS (Dot Pattern) */
+  /* Cria pontos azuis muito sutis espaçados */
+  background-image: radial-gradient(
+    rgba(29, 78, 216, 0.15) 1px,
+    transparent 1px
+  );
+  background-size: 32px 32px;
+}
+
+/* CUSTOM SCROLLBAR (Para Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 5px;
+  border: 2px solid #0a0a0a; /* Cria um respiro visual */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #404040;
 }
