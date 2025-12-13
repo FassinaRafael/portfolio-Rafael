@@ -3,25 +3,27 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import ProjectCard from "./components/ProjectCard";
 import TechBadge from "./components/TechBadge";
+import About from "./components/About";
+import Footer from "./components/Footer"; // Importando o Footer
 import { projects } from "./data/projects";
 
 export default function Portfolio() {
   return (
-    // Removida a classe 'bg-neutral-950' para mostrar o background do index.css
     <div className="min-h-screen text-neutral-200 p-8 font-sans selection:bg-blue-500/30">
-      <div className="max-w-6xl mx-auto space-y-8">
-        {/* Componentes Estruturais */}
-        <Header />
-        <Hero />
+      <div className="max-w-6xl mx-auto space-y-24">
+        {/* Componentes Estruturais de Topo */}
+        <div className="space-y-8">
+          <Header />
+          <Hero />
+        </div>
 
-        {/* Grid Principal */}
+        {/* Seção de Projetos */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Renderização Dinâmica dos Projetos */}
           {projects.map((project, index) => (
             <ProjectCard key={project.id} {...project} index={index} />
           ))}
 
-          {/* Card de Tech Stack Animado */}
+          {/* Tech Stack */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -36,6 +38,12 @@ export default function Portfolio() {
             </div>
           </motion.div>
         </div>
+
+        {/* Seção Sobre Mim */}
+        <About />
+
+        {/* Rodapé Final */}
+        <Footer />
       </div>
     </div>
   );
