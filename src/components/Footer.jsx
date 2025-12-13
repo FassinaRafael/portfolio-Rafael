@@ -22,7 +22,7 @@ export default function Footer() {
         {/* Lado Direito: Chamada para Ação + Links */}
         <div className="flex flex-col items-center md:items-end gap-4">
           <a
-            href="mailto:seuemail@exemplo.com"
+            href="mailto:fassinarafael1105@gmail.com"
             className="text-neutral-200 hover:text-blue-400 transition-colors font-medium flex items-center gap-2"
           >
             <Mail size={18} />
@@ -30,8 +30,14 @@ export default function Footer() {
           </a>
 
           <div className="flex gap-4">
-            <SocialLink href="#" icon={<Github size={18} />} />
-            <SocialLink href="#" icon={<Linkedin size={18} />} />
+            <SocialLink
+              href="https://github.com/FassinaRafael"
+              icon={<Github size={18} />}
+            />
+            <SocialLink
+              href="https://www.linkedin.com/in/rafael-fassina-285316302/"
+              icon={<Linkedin size={18} />}
+            />
           </div>
         </div>
       </motion.div>

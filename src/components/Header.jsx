@@ -12,9 +12,18 @@ export default function Header() {
     >
       <h1 className="text-2xl font-bold text-blue-400">Rafael.dev</h1>
       <div className="flex gap-4">
-        <SocialLink href="#" icon={<Github size={20} />} />
-        <SocialLink href="#" icon={<Linkedin size={20} />} />
-        <SocialLink href="#" icon={<Mail size={20} />} />
+        <SocialLink
+          href="https://github.com/FassinaRafael"
+          icon={<Github size={20} />}
+        />
+        <SocialLink
+          href="https://www.linkedin.com/in/rafael-fassina-285316302/"
+          icon={<Linkedin size={20} />}
+        />
+        <SocialLink
+          href="mailto:fassinarafael1105@gmail.com"
+          icon={<Mail size={20} />}
+        />
       </div>
     </motion.header>
   );

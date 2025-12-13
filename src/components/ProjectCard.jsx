@@ -8,17 +8,18 @@ export default function ProjectCard({
   tags,
   link,
   className = "",
-  index, // Nova prop para controlar o tempo de animação
+  index,
+  imgUrl,
 }) {
   return (
     <motion.div
       // Animação de Entrada
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.1 + 0.5 }} // Delay progressivo + offset inicial
-      // Animação de Interação (Hover)
+      transition={{ duration: 0.5, delay: index * 0.1 + 0.5 }}
+      // Animação de Interação
       whileHover={{ y: -10, scale: 1.02 }}
-      className={`p-6 rounded-3xl border border-blue-500/30 bg-blue-900/10 ${className}`}
+      className={`p-6 rounded-3xl border border-blue-500/30 bg-blue-900/10 ${className} flex flex-col`}
     >
       <div className="flex justify-between items-start mb-4">
         <h3 className="text-xl font-bold text-white">{title}</h3>
@@ -34,16 +35,27 @@ export default function ProjectCard({
         )}
       </div>
 
-      <p className="text-neutral-400 mb-4">{description}</p>
+      <p className="text-neutral-400 mb-4 flex-grow">{description}</p>
 
-      <div className="flex flex-wrap gap-2 mb-4">
+      <div className="flex flex-wrap gap-2 mb-6">
         {tags.map((tag) => (
           <TechBadge key={tag} name={tag} />
         ))}
       </div>
 
-      <div className="h-64 bg-neutral-900 rounded border border-neutral-800 flex items-center justify-center text-neutral-600">
-        (Imagem do Projeto)
+      {/* Container da Imagem */}
+      <div className="rounded-xl overflow-hidden border border-neutral-800 bg-neutral-950 h-64 flex items-center justify-center">
+        {imgUrl ? (
+          <img
+            src={imgUrl}
+            alt={`Imagem do projeto ${title}`}
+            className="w-full h-full max-h-64 object-contain hover:scale-105 transition-transform duration-500"
+          />
+        ) : (
+          <div className="text-neutral-600 font-medium">
+            (Imagem do Projeto)
+          </div>
+        )}
       </div>
     </motion.div>
   );
