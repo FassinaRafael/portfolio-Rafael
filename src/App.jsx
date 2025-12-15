@@ -32,7 +32,14 @@ export default function Portfolio() {
           >
             <h3 className="text-xl font-bold text-white mb-4">Tech Stack</h3>
             <div className="flex flex-wrap gap-2">
-              {["React", "Node.js", "Tailwind", "SQL"].map((tech) => (
+              {[
+                "React",
+                "Node.js",
+                "Tailwind",
+                "SQL",
+                "Kubernetes",
+                "Docker",
+              ].map((tech) => (
                 <TechBadge key={tech} name={tech} />
               ))}
             </div>
