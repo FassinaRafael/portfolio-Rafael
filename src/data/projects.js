@@ -18,4 +18,14 @@ export const projects = [
     className: "md:col-span-1", // Ocupa 1 coluna (card menor)
     imgUrl: "/finance.png",
   },
+  {
+    id: 3,
+    title: "TrustLayer Platform",
+    description:
+      "Plataforma de Governança de APIs Zero-Trust. Implementa autenticação, rate-limiting e segurança centralizada para microsserviços via Kubernetes.",
+    tags: ["Kubernetes", "Kong", "OPA", "Helm"],
+    link: "https://github.com/FassinaRafael/trustlayer",
+    className: "md:col-span-3",
+    imgUrl: "/trustlayer.png",
+  },
 ];
