@@ -6,8 +6,8 @@ export const projects = [
       "Plataforma de Engenharia de Dados com IA. Pipeline de ingestão de PDFs orquestrado por Temporal.io, extração cognitiva com Google Gemini e arquitetura de microsserviços em Docker.",
     tags: ["Temporal.io", "Python FastAPI", "Docker", "Next.js", "Gemini AI"],
     link: "https://github.com/FassinaRafael/docuflow-compliance", // Link do seu repo
-    className: "md:col-span-2", // Destaque grande
-    imgUrl: "/docuflow.png", // Veja instrução abaixo sobre a imagem
+    className: "md:col-span-2",
+    imgUrl: "/docuflow.png",
   },
   {
     id: 2,
