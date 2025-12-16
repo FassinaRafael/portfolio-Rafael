@@ -5,18 +5,18 @@ export default function About() {
   const features = [
     {
       icon: <Code2 className="text-blue-400" />,
-      title: "Clean Code",
-      text: "Manutenibilidade e escalabilidade são prioridades, não diferenciais.",
+      title: "Arquitetura Resiliente",
+      text: "Código limpo é o básico. Foco em criar sistemas desacoplados e preparados para crescer sem quebrar.",
     },
     {
       icon: <Rocket className="text-blue-400" />,
-      title: "Performance",
-      text: "Aplicações otimizadas para carregar rápido e reter usuários.",
+      title: "Escalabilidade & Segurança",
+      text: "Aplicações otimizadas não só para carregar rápido, mas para resistir a picos de tráfego e ataques (Zero Trust).",
     },
     {
       icon: <Users className="text-blue-400" />,
-      title: "Colaboração",
-      text: "Comunicação clara e trabalho em equipe para atingir objetivos.",
+      title: "DevSecOps Mindset",
+      text: "Integro desenvolvimento e operações para entregar valor contínuo, reduzindo o atrito entre código e deploy.",
     },
   ];
 
@@ -31,17 +31,18 @@ export default function About() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl font-bold text-white mb-6">
-            Mais que apenas código
+            De interfaces pixel-perfect a clusters blindados
           </h2>
           <p className="text-neutral-400 text-lg leading-relaxed mb-6">
-            Minha jornada como desenvolvedor começou com a curiosidade de
-            entender como as coisas funcionam. Hoje, uso essa curiosidade para
-            criar soluções que resolvem problemas reais.
+            Minha jornada começou no Frontend, criando experiências visuais
+            ricas. Mas logo percebi que uma interface bonita não sobrevive sem
+            uma fundação sólida.
           </p>
           <p className="text-neutral-400 text-lg leading-relaxed">
-            Acredito que um bom software é aquele que passa despercebido de tão
-            natural que é o seu uso. Estou sempre em busca de novas tecnologias
-            e metodologias para elevar o nível das minhas entregas.
+            Hoje, atuo como um engenheiro "Full Cycle": tenho a capacidade de
+            desenhar a UI, codar a API e provisionar a infraestrutura onde tudo
+            isso roda. Acredito que o verdadeiro código limpo é aquele que é
+            seguro, escalável e fácil de operar.
           </p>
         </motion.div>
 
