@@ -39,6 +39,8 @@ export default function Portfolio() {
                 "SQL",
                 "Kubernetes",
                 "Docker",
+                "PostgreSQL",
+                "Python",
               ].map((tech) => (
                 <TechBadge key={tech} name={tech} />
               ))}
